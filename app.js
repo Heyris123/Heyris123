@@ -324,6 +324,9 @@ class App{
     }
 
 	render( timestamp, frame ){
+        this.cube.rotation.y = timestamp / 1000;
+        this.cube.rotation.x = timestamp / 1000;
+
         const dt = this.clock.getDelta();
         
         if (this.renderer.xr.isPresenting){
